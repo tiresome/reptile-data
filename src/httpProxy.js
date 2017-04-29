@@ -15,7 +15,8 @@ const options = {
         webPort: 8002,
         wsPort: 8003
     },
-    forceProxyHttps: true
+    forceProxyHttps: true,
+    silent: true
 }
 
 const proxyServer = new AnyProxy.ProxyServer(options);

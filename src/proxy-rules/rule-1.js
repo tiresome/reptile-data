@@ -2,32 +2,27 @@
  * Created by zhengqiguang on 2017/4/16.
  */
 
+var path = require("path"),
+    fs = require("fs");
+
+
+//知乎 微信 查看全文问题 https://www.zhihu.com/question/32077992
 module.exports = {
     summary: "my test rule",
-    *beforeSendRequest(res){
-
-        return null
+    *beforeSendRequest(req){
+        console.log(req.url);
     },
-    *beforeDealHttpsRequest(requestDetail){
-        console.log(requestDetail);
-        return true;
-    },
-    *beforeSendResponse(req, res){
-        if (req.url.indexOf("weixin110.qq.com") !== -1) {
-            console.log("hhhhhhhhhhhhhhhhhhhhhh");
 
-            res.response.statusCode = 404;
-
-            // var newResponse = Object.assign({}, res.reponse);
-            // newResponse.body = '--from anyproxy--';
-            return {
-                response: res.response
-            }
-
-
-        }
-
-
+    *onError(req, error){
+        return null;
     }
 }
 
+function uintToString(uintArray) {
+    try {
+        var a = String.fromCharCode.apply(null, new Uint16Array(uintArray));
+        return a;
+    } catch (e) {
+        return "{}";
+    }
+}

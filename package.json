@@ -20,6 +20,7 @@
     "anyproxy": "^4.0.0-beta10",
     "cheerio": "^0.22.0",
     "got": "^6.7.1",
-    "http-proxy": "^1.16.2"
+    "http-proxy": "^1.16.2",
+    "zhihu": "^1.4.1"
   }
 }
