@@ -41,6 +41,7 @@ for (let i = 0; i < temp.length; i++) {
 }
 
 
+
 wxJokeApi.insertMany(insertTemp).then(result => {
 });
 
